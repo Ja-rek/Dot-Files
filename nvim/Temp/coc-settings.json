@@ -1,0 +1,50 @@
+{
+  "tsserver.log": "normal",
+  "tsserver.trace.server": "verbose",
+  "suggest.noselect": false,
+  "suggest.snippetIndicator": "►",
+  "suggest.minTriggerInputLength": 2,
+  "suggest.floatEnable": true,
+  "suggest.enablePreview": true,
+  "coc.preferences.formatOnSaveFiletypes": ["elm"],
+  "codeLens.enable": true,
+  "languageserver": {
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "trace.server": "verbose",
+      "initializationOptions": {
+	"elmPath": "elm",
+        "elmFormatPath": "elm-format",
+	"elmTestPath": "elm-test",
+	"elmAnalyseTrigger": "change"
+      }
+    },
+    "haskell": {
+      "trace.server": "verbose",
+      "command": "hie-wrapper",
+      "rootPatterns": [
+        "stack.yaml",
+        "cabal.config",
+        "package.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
+      "initializationOptions": {
+        "languageServerHaskell": {
+        }
+      }
+    },
+    "purescript": {
+       "command": "purescript-language-server",
+       "args": ["--stdio"],
+       "filetypes": ["purescript"],        
+       "trace.server": "verbose",
+       "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
+    }
+  }
+}
